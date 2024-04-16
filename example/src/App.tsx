@@ -1,31 +1,26 @@
 import * as React from 'react';
 
-import { StyleSheet, View, Text } from 'react-native';
-import { multiply } from '@cicerotcv/react-native-layout';
+import { Layout, Typography } from '@cicerotcv/react-native-layout';
 
 export default function App() {
-  const [result, setResult] = React.useState<number | undefined>();
-
-  React.useEffect(() => {
-    multiply(3, 7).then(setResult);
-  }, []);
-
   return (
-    <View style={styles.container}>
-      <Text>Result: {result}</Text>
-    </View>
+    <Layout
+      flex={1}
+      backgroundColor="gray"
+      justifyContent="center"
+      alignItems="center"
+      viewProps={{
+        collapsable: true,
+      }}
+    >
+      <Typography
+        color="red"
+        backgroundColor="black"
+        fontWeight="bold"
+        fontSize={32}
+      >
+        Hello World
+      </Typography>
+    </Layout>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  box: {
-    width: 60,
-    height: 60,
-    marginVertical: 20,
-  },
-});

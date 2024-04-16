@@ -1,4 +1,4 @@
-# @cicerotcv/react-native-layout
+# React Native Layout
 
 Easy to style React Native components
 
@@ -10,12 +10,15 @@ npm install @cicerotcv/react-native-layout
 
 ## Usage
 
-```js
-import { multiply } from '@cicerotcv/react-native-layout';
+```tsx
+import { Layout, Typography } from '@cicerotcv/react-native-layout';
 
-// ...
-
-const result = await multiply(3, 7);
+<Layout flex={1} backgrounColor="gray">
+  <Typography fontSize={32} backgroundColor="black" color="red">
+    Hello World
+  </Typography>
+  {/* rest of your code */}
+</Layout>
 ```
 
 ## Contributing

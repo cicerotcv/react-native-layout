@@ -32,7 +32,8 @@
     "lint": "eslint \"**/*.{js,ts,tsx}\"",
     "clean": "del-cli lib",
     "prepare": "bob build",
-    "release": "release-it"
+    "release": "release-it",
+    "prettier:fix": "prettier --write \"**/*.{js,ts,tsx,json}\""
   },
   "keywords": [
     "react-native",
@@ -41,14 +42,14 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cicerotcv/cicerotcv-react-native-layout.git"
+    "url": "git+https://github.com/cicerotcv/react-native-layout.git"
   },
   "author": "cicerotcv <elm.tiago@gmail.com> (https://github.com/cicerotcv)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/cicerotcv/cicerotcv-react-native-layout/issues"
+    "url": "https://github.com/cicerotcv/react-native-layout/issues"
   },
-  "homepage": "https://github.com/cicerotcv/cicerotcv-react-native-layout#readme",
+  "homepage": "https://github.com/cicerotcv/react-native-layout#readme",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
@@ -115,33 +116,13 @@
   "eslintConfig": {
     "root": true,
     "extends": [
-      "@react-native",
-      "prettier"
-    ],
-    "rules": {
-      "prettier/prettier": [
-        "error",
-        {
-          "quoteProps": "consistent",
-          "singleQuote": true,
-          "tabWidth": 2,
-          "trailingComma": "es5",
-          "useTabs": false
-        }
-      ]
-    }
+      "@react-native"
+    ]
   },
   "eslintIgnore": [
     "node_modules/",
     "lib/"
   ],
-  "prettier": {
-    "quoteProps": "consistent",
-    "singleQuote": true,
-    "tabWidth": 2,
-    "trailingComma": "es5",
-    "useTabs": false
-  },
   "react-native-builder-bob": {
     "source": "src",
     "output": "lib",
