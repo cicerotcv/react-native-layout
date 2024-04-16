@@ -1,12 +1,13 @@
 {
   "name": "@cicerotcv/react-native-layout",
-  "version": "0.1.0",
+  "version": "0.3.0",
   "description": "Easy to style React Native components",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
   "types": "lib/typescript/src/index.d.ts",
   "react-native": "src/index",
   "source": "src/index",
+  "private": false,
   "files": [
     "src",
     "lib",
@@ -51,7 +52,8 @@
   },
   "homepage": "https://github.com/cicerotcv/react-native-layout#readme",
   "publishConfig": {
-    "registry": "https://registry.npmjs.org/"
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
   },
   "devDependencies": {
     "@commitlint/config-conventional": "^17.0.2",
