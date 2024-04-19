@@ -7,7 +7,6 @@
   "types": "lib/typescript/src/index.d.ts",
   "react-native": "src/index",
   "source": "src/index",
-  "private": false,
   "files": [
     "src",
     "lib",
@@ -34,7 +33,7 @@
     "clean": "del-cli lib",
     "prepare": "bob build",
     "release": "release-it",
-    "prettier:fix": "prettier --write \"**/*.{js,ts,tsx,json}\""
+    "prettier:fix": "prettier --write \"./src/**/*.{js,ts,tsx,json}\""
   },
   "keywords": [
     "react-native",
@@ -72,6 +71,7 @@
     "react": "18.2.0",
     "react-native": "0.73.6",
     "react-native-builder-bob": "^0.20.0",
+    "react-native-reanimated": "^3.8.1",
     "release-it": "^15.0.0",
     "typescript": "^5.2.2"
   },
@@ -80,7 +80,8 @@
   },
   "peerDependencies": {
     "react": "*",
-    "react-native": "*"
+    "react-native": "*",
+    "react-native-reanimated": "*"
   },
   "workspaces": [
     "example"
