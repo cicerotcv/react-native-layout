@@ -1,20 +1,6 @@
 import * as React from 'react';
 
-import { Layout, Skeleton, Typography } from '@cicerotcv/react-native-layout';
-import { Easing } from 'react-native-reanimated';
-import type { ViewStyle } from 'react-native';
-
-const CustomSkeleton = (props: ViewStyle) => (
-  <Skeleton
-    animationConfig={{
-      minOpacity: 0.4,
-      maxOpacity: 0.8,
-      stepDuration: 400,
-      easing: Easing.inOut(Easing.ease),
-    }}
-    {...props}
-  />
-);
+import { Layout, Typography } from '@cicerotcv/react-native-layout';
 
 export default function App() {
   return (
@@ -28,11 +14,18 @@ export default function App() {
         collapsable: true,
       }}
     >
-      <Layout gap={8}>
-        <CustomSkeleton width={140} />
-        <CustomSkeleton width={150} />
-        <CustomSkeleton width={140} />
-      </Layout>
+      <Layout.Row justifyContent="space-between">
+        <Layout.Column flex={1}>
+          <Typography>first column</Typography>
+        </Layout.Column>
+        <Layout.Column flex={1}>
+          <Typography>second column</Typography>
+        </Layout.Column>
+        <Layout.Column flex={1}>
+          <Typography>third column</Typography>
+        </Layout.Column>
+      </Layout.Row>
+
       <Typography
         color="red"
         backgroundColor="black"
